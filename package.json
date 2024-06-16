@@ -1,0 +1,31 @@
+{
+  "name": "foodie",
+  "version": "1.0.0",
+  "description": "This is a Food app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v1v4k/FoodApp.git"
+  },
+  "keywords": [],
+  "author": "vivek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/v1v4k/FoodApp/issues"
+  },
+  "homepage": "https://github.com/v1v4k/FoodApp#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ]
+}
