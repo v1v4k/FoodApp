@@ -32,3 +32,16 @@ We can make our app compatible for older versions of browsers
                 "last 10 versions"
          ]
     we can check coverage of the browsers website: https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
+
+
+# CHAPTER - 3
+
+Configuring scripts for lengthy commands
+    npx parcel index.html ~ npm run start ~ npm start
+    npx parcel build index.html ~ npm run build
+
+JSX is a xml/html like syntax
+    JSX ==> react element (BABEL) ~ JS Object ==> html element (render)
+    BABEL(minister) package is installed along with the PARCEL(Prime Minister)
+    BABEL is a transpiler which converts JSX code to JS Object
+
