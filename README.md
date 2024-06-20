@@ -45,3 +45,12 @@ JSX is a xml/html like syntax
     BABEL(minister) package is installed along with the PARCEL(Prime Minister)
     BABEL is a transpiler which converts JSX code to JS Object
 
+React Component
+    - class based (old)
+    - functional based (new) 
+    React Functional Component is a JS function which returns JSX code
+    Naming of components should start with capital letter
+    React component can be rendered by using render(<Component/> or {Component()})
+    Component Composition - composing two components into one another
+    We can put React element inside a Component(jsx) using {element}
+    JSX takes care of injection attacks like cross-site scripting 
