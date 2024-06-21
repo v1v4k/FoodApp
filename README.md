@@ -54,3 +54,10 @@ React Component
     Component Composition - composing two components into one another
     We can put React element inside a Component(jsx) using {element}
     JSX takes care of injection attacks like cross-site scripting 
+
+# CHAPTER-4
+building a food app
+inline css  {{}} ==> inner - it's a javascript code, outer - js object
+Dynamically passing data
+    passing data as props to a component 
+    destructuring of data on fly

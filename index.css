@@ -1,0 +1,54 @@
+.logo{
+    height: 125px;
+    width: 125px;
+}
+.nav-items>ul{
+    font-size: 25px;
+    display: flex;
+}
+
+.nav-items>ul>li{
+    
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.search-bar{
+    
+    margin:5px;
+    padding:5px;
+}
+
+.res-card
+{
+    width: 200px;
+    height: 300px;
+    margin:5px;
+    padding: 5px;
+    
+}
+.res-card:hover
+{
+    cursor: pointer;
+    border: 1px solid #f0f0f0;
+}
+.res-logo{
+    width:125px;
+    height: 150px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.res-container{
+    display: flex;
+    
+}
