@@ -61,3 +61,7 @@ inline css  {{}} ==> inner - it's a javascript code, outer - js object
 Dynamically passing data
     passing data as props to a component 
     destructuring of data on fly
+config driven UI's
+using data from swiggy api for restaurant cards
+we're building reusable cards and passing data to it through dynamic props
+How to use for loop instead of array.map method

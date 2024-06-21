@@ -30,8 +30,8 @@
 
 .res-card
 {
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 400px;
     margin:5px;
     padding: 5px;
     
@@ -50,5 +50,5 @@
 
 .res-container{
     display: flex;
-    
+    flex-wrap: wrap;
 }
