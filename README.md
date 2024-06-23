@@ -35,7 +35,6 @@ We can make our app compatible for older versions of browsers
 
 
 # CHAPTER - 3
-
 Configuring scripts for lengthy commands
     npx parcel index.html ~ npm run start ~ npm start
     npx parcel build index.html ~ npm run build
@@ -69,3 +68,14 @@ Iterating using array.map method (used this method very much in react)
 Using keys while looping
     not using key (not acceptable) <<<< using index <<<<<< using unique id(best practice)
 Optional Chaining
+
+# CHAPTER-5
+restrucuturing our app
+two types of imports/exports
+    default import/export
+        export default Component;
+        import Component from "path";
+    named import/export
+        export const variable/Component;
+        import {Component} from "path";
+
