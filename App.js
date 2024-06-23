@@ -528,120 +528,6 @@ const resList = [
     },
     {
       "info": {
-        "id": "433772",
-        "name": "Great Indian Khichdi by EatFit",
-        "cloudinaryImageId": "6e44fd7f1e5cd9967edfe47c10247671",
-        "locality": "SARDAR PATEL ROAD",
-        "areaName": "Begumpet",
-        "costForTwo": "₹200 for two",
-        "cuisines": [
-          "Home Food",
-          "Indian",
-          "North Indian",
-          "Healthy Food",
-          "Snacks",
-          "Desserts",
-          "Rajasthani",
-          "South Indian",
-          "Maharashtrian",
-          "Sweets"
-        ],
-        "avgRating": 4.3,
-        "parentId": "319582",
-        "avgRatingString": "4.3",
-        "totalRatingsString": "1K+",
-        "sla": {
-          "deliveryTime": 30,
-          "lastMileTravel": 5,
-          "serviceability": "SERVICEABLE",
-          "slaString": "30-35 mins",
-          "lastMileTravelString": "5.0 km",
-          "iconType": "ICON_TYPE_EMPTY"
-        },
-        "availability": {
-          "nextCloseTime": "2024-06-22 01:00:00",
-          "opened": true
-        },
-        "badges": {
-          "imageBadges": [
-            {
-              "imageId": "v1695133679/badges/Pure_Veg111.png",
-              "description": "pureveg"
-            }
-          ],
-          "textExtendedBadges": [
-            {
-              "iconId": "guiltfree/GF_Logo_android_3x",
-              "shortDescription": "brand",
-              "fontColor": "#7E808C"
-            }
-          ]
-        },
-        "isOpen": true,
-        "type": "F",
-        "badgesV2": {
-          "entityBadges": {
-            "imageBased": {
-              "badgeObject": [
-                {
-                  "attributes": {
-                    "description": "pureveg",
-                    "imageId": "v1695133679/badges/Pure_Veg111.png"
-                  }
-                }
-              ]
-            },
-            "textBased": {
-              
-            },
-            "textExtendedBadges": {
-              "badgeObject": [
-                {
-                  "attributes": {
-                    "description": "",
-                    "fontColor": "#7E808C",
-                    "iconId": "guiltfree/GF_Logo_android_3x",
-                    "shortDescription": "brand"
-                  }
-                }
-              ]
-            }
-          }
-        },
-        "aggregatedDiscountInfoV3": {
-          "header": "60% OFF",
-          "subHeader": "UPTO ₹120"
-        },
-        "differentiatedUi": {
-          "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-          "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {
-              
-            },
-            "video": {
-              
-            }
-          }
-        },
-        "reviewsSummary": {
-          
-        },
-        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-        "restaurantOfferPresentationInfo": {
-          
-        }
-      },
-      "analytics": {
-        
-      },
-      "cta": {
-        "link": "https://www.swiggy.com/restaurants/great-indian-khichdi-by-eatfit-sardar-patel-road-begumpet-hyderabad-433772",
-        "type": "WEBLINK"
-      }
-    },
-    {
-      "info": {
         "id": "622148",
         "name": "MOJO Pizza - 2X Toppings",
         "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/5/20/0fbf3dd4-03fc-403e-b861-6d7455bcb69b_622148.JPG",
@@ -1966,31 +1852,32 @@ const HeaderComponent = () =>{
 
 const RestaurantCard = ({resData})=>{
    // const {resData} = props;
-    
+   
+   
+   const{name,
+    cuisines,
+    avgRating
+   }=resData?.info
     return(
         <div className="res-card">
             <img className="res-logo" 
             src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${resData.info.cloudinaryImageId}`}/>
-            <h3 className="res-name">{resData.info.name}</h3>
-            <h4 className="res-cuisine">{resData.info.cuisines.join(", ")}</h4>
-            <h4>★ {resData.info.avgRating}</h4>
+            <h3 className="res-name">{name}</h3>
+            <h4 className="res-cuisine">{cuisines.join(", ")}</h4>
+            <h4>★ {avgRating}</h4>
             <h4>{resData.info.sla.deliveryTime} mins</h4>
         </div>
     )
 }
-const restaurantCards = [];
-for(let i = 0;i<resList.length;i++)
-{
-    restaurantCards.push(<RestaurantCard resData={resList[i]}/>);
 
-}
 
 const BodyComponent = () =>{
     return(
         <div className="body-container">
             <div className="search-bar">Search</div>
             <div className="res-container">
-                {restaurantCards};
+                {resList.map((restaurant)=>(
+                    <RestaurantCard key={restaurant.info.id} resData={restaurant}/>))}
             </div>
         </div>
     )

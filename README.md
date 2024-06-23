@@ -64,4 +64,8 @@ Dynamically passing data
 config driven UI's
 using data from swiggy api for restaurant cards
 we're building reusable cards and passing data to it through dynamic props
-How to use for loop instead of array.map method
+How to use for loop instead of array.map method ?
+Iterating using array.map method (used this method very much in react)
+Using keys while looping
+    not using key (not acceptable) <<<< using index <<<<<< using unique id(best practice)
+Optional Chaining
