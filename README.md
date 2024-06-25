@@ -34,7 +34,7 @@ We can make our app compatible for older versions of browsers
     we can check coverage of the browsers website: https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z
 
 
-# CHAPTER - 3
+# CHAPTER-3
 Configuring scripts for lengthy commands
     npx parcel index.html ~ npm run start ~ npm start
     npx parcel build index.html ~ npm run build
@@ -79,3 +79,8 @@ two types of imports/exports
         export const variable/Component;
         import {Component} from "path";
 
+Implementing filter button "Top Rated Restaurants" in our app
+React Hooks - normal JS function which gives us state variables so that 
+we can keep UI in sync with the DATA layer
+whenever state variable changes React rerenders the component
+Diff Algorithm(React Fiber)
