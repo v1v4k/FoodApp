@@ -17,7 +17,7 @@ const HeaderComponent = () =>{
                     <li>Cart🛒</li>
                     <button className="login-btn" onClick={()=>
                         (loginButton=="Logout"? SetLoginButton("Login") :
-                        SetClickButton("Logout"))}>{loginButton}</button>
+                        SetLoginButton("Logout"))}>{loginButton}</button>
                 </ul>
             </div>
         </div>
