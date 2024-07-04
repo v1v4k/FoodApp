@@ -1,5 +1,6 @@
 import {headerLogo} from "../utils/constants";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 const HeaderComponent = () =>{
     const [loginButton, SetLoginButton] = useState("Login");
     useEffect(()=>{
@@ -21,40 +22,21 @@ const HeaderComponent = () =>{
             <div className="nav-items">
                 <ul>
                     <li>
-                        <button 
-                            className="home-btn"
-                            onClick={()=>{
-                            
-                            }}>🏠Home
-                        </button>
+                        <Link to="/"><button className="header-btns">🏠Home</button></Link>
                     </li>
                     <li>
-                        <button 
-                            className="about-btn"
-                            onClick={()=>{
-                            
-                            }}>About Us
-                        </button>
+                        <Link to="/About"><button className="header-btns">About</button></Link>
                     </li>
                     <li>
-                        <button 
-                            className="contact-btn"
-                            onClick={()=>{
-
-                            }}>☎️Contact Us
-                        </button>
+                        <Link to="/Contact"><button className="header-btns">☎️Contact</button></Link>  
                     </li>
                     <li>
-                        <button 
-                            className="cart-btn"
-                            onClick={()=>{
-
-                            }}>Cart🛒
-                        </button>
+                        <button className="header-btns">Cart🛒</button>
                     </li>
                     <li>
-                        <button 
-                            className="login-btn" 
+                        <button
+                            className="header-btns" 
+                            id="login-btn" 
                             onClick={()=>{
                                 loginButton=="Logout"? SetLoginButton("Login") :
                                 SetLoginButton("Logout")}}>{loginButton}

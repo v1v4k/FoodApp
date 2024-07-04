@@ -75,11 +75,7 @@ html{
     flex-wrap: wrap;
 }
 
-.login-btn,
-.contact-btn,
-.home-btn,
-.about-btn,
-.cart-btn{
+.header-btns{
     padding:  12px;
     cursor: pointer;
 }

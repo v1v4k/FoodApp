@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/HeaderComponent";
 import BodyComponent from "./components/BodyComponent";
-import { createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
@@ -11,7 +11,7 @@ import ErrorPage from "./components/ErrorPage";
     return (
         <div>
             <HeaderComponent/>
-            <BodyComponent/> 
+            <Outlet/> 
         </div>
     )
  }
@@ -20,16 +20,23 @@ import ErrorPage from "./components/ErrorPage";
     {
         path: "/",
         element: <AppLayout />,
+        children:[
+            {
+                path: "/",
+                element: <BodyComponent />
+            },
+            {
+                path: "/about",
+                element: <About />
+            },
+            {
+                path: "contact",
+                element: <Contact />
+            }
+        ],
         errorElement: <ErrorPage />
     },
-    {
-        path: "/about",
-        element: <About />
-    },
-    {
-        path: "contact",
-        element: <Contact />
-    }
+    
  ])
 
 const route = ReactDOM.createRoot(document.getElementById("root"));

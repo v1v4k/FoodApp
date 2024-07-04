@@ -108,6 +108,30 @@ using the hook
     const appRouter = createBrowserRouter([]);
 using RouterProvider for rendering
     route.render(<RouterProvider router={appRouter }/>);
-creating customised error page 
+creating customised error page (Error Handling)
     we can use the hook import { useRouteError } from "react-router-dom"; to get more information 
     about the error.
+Creating children routes to the "root route" ("/") i.e., the AppLayout component
+    keeping the header page intact and only the BodyComponent should change while navigating b/w pages
+    importing Outlet component from react-router-dom
+        import {Outlet} from "react-router-dom";
+        const AppLayout = () =>{
+            return (
+                <div>
+                    <HeaderComponent/>
+                    <Outlet/> 
+                </div>
+            )
+        }
+        rendering pages(components like body,about etc.,) through Outlet Component
+Using "Link" component instead of anchor tages to navigate b/w the pages
+    import {Link} from "react-router-dom";
+Two types of routing
+    server-side routing
+        networks to load every page
+    client-side routing (React follows this)
+        No reloading while navigating b/w the pages
+        only one network call when we load the page for the first time
+        other network call is fetching the "swiggy api"
+
+
