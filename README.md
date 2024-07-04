@@ -95,3 +95,19 @@ shimmer UI
 login button in header
 search feature in body 
 fixing the bug in search feature
+
+# CHAPTER - 7
+more about useEffect hook
+usage of useState hook
+Routing in React
+installing react-router-dom
+    npm i react-rotuer-dom
+importing the package
+    import { createBrowserRouter, RouterProvider} from "react-router-dom";
+using the hook
+    const appRouter = createBrowserRouter([]);
+using RouterProvider for rendering
+    route.render(<RouterProvider router={appRouter }/>);
+creating customised error page 
+    we can use the hook import { useRouteError } from "react-router-dom"; to get more information 
+    about the error.

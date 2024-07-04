@@ -1,7 +1,16 @@
 import {headerLogo} from "../utils/constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const HeaderComponent = () =>{
     const [loginButton, SetLoginButton] = useState("Login");
+    useEffect(()=>{
+       // console.log("useEffect is called");
+    },[loginButton]);
+    
+    //console.log("Header Rendered");
+
+    
+
+    
     return(
         <div className = "header">
             <div className="logo-container">
@@ -11,13 +20,46 @@ const HeaderComponent = () =>{
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>🏠Home</li>
-                    <li>About Us</li>
-                    <li>☎️Contact Us</li>
-                    <li>Cart🛒</li>
-                    <button className="login-btn" onClick={()=>
-                        (loginButton=="Logout"? SetLoginButton("Login") :
-                        SetLoginButton("Logout"))}>{loginButton}</button>
+                    <li>
+                        <button 
+                            className="home-btn"
+                            onClick={()=>{
+                            
+                            }}>🏠Home
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            className="about-btn"
+                            onClick={()=>{
+                            
+                            }}>About Us
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            className="contact-btn"
+                            onClick={()=>{
+
+                            }}>☎️Contact Us
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            className="cart-btn"
+                            onClick={()=>{
+
+                            }}>Cart🛒
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            className="login-btn" 
+                            onClick={()=>{
+                                loginButton=="Logout"? SetLoginButton("Login") :
+                                SetLoginButton("Logout")}}>{loginButton}
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
