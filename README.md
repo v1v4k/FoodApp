@@ -84,3 +84,14 @@ React Hooks - normal JS function which gives us state variables so that
 we can keep UI in sync with the DATA layer
 whenever state variable changes React rerenders the component
 Diff Algorithm(React Fiber)
+
+
+# CHAPTERR - 6
+monolith and microservices architecture
+using swiggy live api instead of hard coded data (useEffect hook)
+fetch, async, await
+cors error
+shimmer UI
+login button in header
+search feature in body 
+fixing the bug in search feature
