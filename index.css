@@ -37,8 +37,7 @@ html{
     width: 150px;
     height: 400px;
     margin:10px;
-    padding: 10px;
-    
+    padding: 10px;  
 }
 .res-card:hover
 {
@@ -55,8 +54,7 @@ html{
 
 .res-container{
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;       
 }
 .filter-btn{
     margin: 5px;

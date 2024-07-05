@@ -133,5 +133,9 @@ Two types of routing
         No reloading while navigating b/w the pages
         only one network call when we load the page for the first time
         other network call is fetching the "swiggy api"
-
+Dynamic Routing
+    creating different pages for different restaurants
+    using {params} hook in ResMenu to get resId from the url (/restaurants/resId)
+    using this resId in url to fetch the resMenu data
+    destructuring the data should be done after checking for null with if statement orelse we get errors
 
