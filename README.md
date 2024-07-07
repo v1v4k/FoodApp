@@ -136,6 +136,16 @@ Two types of routing
 Dynamic Routing
     creating different pages for different restaurants
     using {params} hook in ResMenu to get resId from the url (/restaurants/resId)
+        import { useParams } from "react-router-dom";
     using this resId in url to fetch the resMenu data
     destructuring the data should be done after checking for null with if statement orelse we get errors
 
+# CHAPTER - 8
+class based components vs functional components in the about page
+passing props in class based components
+using state variables in class based components
+How state variables are updated in class based components
+
+
+
+ 

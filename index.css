@@ -77,3 +77,9 @@ html{
     padding:  12px;
     cursor: pointer;
 }
+
+.user{
+    padding:10px;
+    margin: 5px;
+    border: 2px solid  black;
+}
