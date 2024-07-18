@@ -13,7 +13,7 @@ const RestaurantMenu = () =>{
     }
     const {name, cuisines, costForTwoMessage}=resMenu?.cards[2]?.card?.card?.info;
 
-    const {itemCards}= resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card;
+    const {itemCards}= resMenu?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2].card?.card;
         
     return(
         <div className="res-menu">

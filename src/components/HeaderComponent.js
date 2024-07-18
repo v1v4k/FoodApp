@@ -25,6 +25,9 @@ const HeaderComponent = () =>{
             <div className="nav-items">
                 <ul>
                     <li>
+                        <Link to="/Grocery"><button className="header-btns">🥑Grocery</button></Link>
+                    </li>
+                    <li>
                         <button className="header-btns">Online Status{onlineStatus?"🟢":"🔴"}</button>
                     </li>
                     <li>
