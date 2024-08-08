@@ -16,35 +16,35 @@ const HeaderComponent = () =>{
 
     
     return(
-        <div className = "header">
-            <div className="logo-container">
-                <img className="logo" 
+        <div className = "flex justify-between  bg-pink-100">
+            <div className="logo-container m-2 p-2">
+                <img className="w-32 h-32" 
                 alt="res-logo"
                 src={headerLogo}/>
             </div>
-            <div className="nav-items">
-                <ul>
+            <div className="">
+                <ul className="flex m-2 p-2">
                     <li>
-                        <Link to="/Grocery"><button className="header-btns">🥑Grocery</button></Link>
+                        <Link to="/"><button className="p-2 m-1 bg-pink-300 rounded-sm">🏠Home</button></Link>
                     </li>
                     <li>
-                        <button className="header-btns">Online Status{onlineStatus?"🟢":"🔴"}</button>
+                        <Link to="/About"><button className="p-2 m-1 bg-pink-300 rounded-sm">About</button></Link>
                     </li>
                     <li>
-                        <Link to="/"><button className="header-btns">🏠Home</button></Link>
+                        <Link to="/Contact"><button className="p-2 m-1 bg-pink-300 rounded-sm">☎️Contact</button></Link>  
                     </li>
                     <li>
-                        <Link to="/About"><button className="header-btns">About</button></Link>
+                        <button className="p-2 m-1 bg-pink-300 rounded-sm">Cart🛒</button>
                     </li>
                     <li>
-                        <Link to="/Contact"><button className="header-btns">☎️Contact</button></Link>  
+                        <Link to="/Grocery"><button className="p-2 m-1 bg-pink-300 rounded-sm">🥑Grocery</button></Link>
                     </li>
                     <li>
-                        <button className="header-btns">Cart🛒</button>
+                        <button className="p-2 m-1 bg-pink-300 rounded-sm">Online Status{onlineStatus?"🟢":"🔴"}</button>
                     </li>
                     <li>
                         <button
-                            className="header-btns" 
+                            className="p-2 m-1 bg-pink-300 rounded-sm"
                             id="login-btn" 
                             onClick={()=>{
                                 loginButton=="Logout"? SetLoginButton("Login") :
