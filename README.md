@@ -145,6 +145,8 @@ class based components vs functional components in the about page
 passing props in class based components
 using state variables in class based components
 How state variables are updated in class based components
+Life Cycle of Components
+How to clear SetTimeOut
 
 
 
