@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 
 import useOnlineStatus from "../utils/useOnlineStatus";
 
+import { useContext } from "react";
+import UserContext from "./UserContext";
+
+
 const BodyComponent = () =>{
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
@@ -17,7 +21,9 @@ const BodyComponent = () =>{
 
     const PromotedRestaurantCard = withPromotedLabel(RestaurantCard);
 
-    console.log(listOfRestaurants);
+    const {loggedInUser, setUserName}=useContext(UserContext);
+
+    //console.log(listOfRestaurants);
  
 
     useEffect(()=>{
@@ -74,6 +80,10 @@ const BodyComponent = () =>{
                 >
                     Top Rated Restaurants
                 </button>
+                <label className="text-lg"> User Name </label>
+                <input className="border border-red p-2" 
+                        value={loggedInUser}
+                        onChange={(e)=>setUserName(e.target.value)}></input>
             </div>
             <div className="flex flex-wrap">
                 {listOfFilterRes.map((restaurant)=>(

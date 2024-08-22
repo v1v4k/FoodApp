@@ -5,17 +5,17 @@ import { Component } from "react";
 class About extends Component{
     constructor(props){
         super(props)
-        console.log("Parent Constructor");
+        //console.log("Parent Constructor");
 
     }
     
     componentDidMount(){
 
-        console.log("Parent Comp_Did_Mount");
+        //console.log("Parent Comp_Did_Mount");
 
     }
     render(){
-        console.log("Parent Render");
+        //console.log("Parent Render");
         return(
         <div className="about">
             <h1>About</h1>

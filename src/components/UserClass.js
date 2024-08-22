@@ -39,6 +39,8 @@ class  UserClass extends React.Component{
 export default UserClass; */
 
 import React from "react"
+import { useContext } from "react";
+import UserContext from "./UserContext";
 class UserClass extends React.Component{
     constructor(props){
         super(props)
@@ -51,29 +53,29 @@ class UserClass extends React.Component{
                 name: "Dummy",
             },
         }
-        console.log(this.props.oldName +" Child Constructor");
+       // console.log(this.props.oldName +" Child Constructor");
     }
 
     async componentDidMount(){
 
-        console.log(this.props.oldName+" Child Comp_Did_Mount");
+       // console.log(this.props.oldName+" Child Comp_Did_Mount");
 
         const data = await fetch("https://api.restful-api.dev/objects/7");
         const json = await data.json();
-        console.log(this.state.userInfo);
+       // console.log(this.state.userInfo);
 
         this.setState({
             userInfo: json,
         });
 
        // console.log(json);
-       console.log(this.state.userInfo.name);
+      // console.log(this.state.userInfo.name);
        
 
     }
 
     componentDidUpdate(){
-        console.log("Component Did Update");
+       // console.log("Component Did Update");
     }
 
    
@@ -85,12 +87,17 @@ class UserClass extends React.Component{
         const {id, name}= this?.state?.userInfo;
 
 
-        
-
-       console.log(this.props.oldName +" Child Render");
+      // console.log(this.props.oldName +" Child Render");
       // console.log(this.state.userInfo);
+
         return(
             <div className="border-solid border-green-500 border-2 m-2 p-2">
+            <UserContext.Consumer>
+            {
+                (data)=><div className="bg-orange-500 text-lg font-bold">{data.loggedInUser}</div>
+            }
+        </UserContext.Consumer>
+                
                 <h1>Name : {oldName}</h1>
                 <button
                     className="bg-green-500 p-2" 

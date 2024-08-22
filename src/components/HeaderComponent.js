@@ -2,6 +2,8 @@ import {headerLogo} from "../utils/constants";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import UserContext from "./UserContext";
 const HeaderComponent = () =>{
     const [loginButton, SetLoginButton] = useState("Login");
     useEffect(()=>{
@@ -12,11 +14,15 @@ const HeaderComponent = () =>{
     
     //console.log("Header Rendered");
 
+    const data = useContext(UserContext);
+
+    //console.log(data.userName)
+
     
 
     
     return(
-        <div className = "flex justify-between  bg-pink-100">
+        <div className = "flex justify-between  bg-emerald-300">
             <div className="logo-container m-2 p-2">
                 <img className="w-32 h-32" 
                 alt="res-logo"
@@ -24,32 +30,33 @@ const HeaderComponent = () =>{
             </div>
             <div className="">
                 <ul className="flex m-2 p-2">
-                    <li>
-                        <Link to="/"><button className="p-2 m-1 bg-pink-300 rounded-sm">🏠Home</button></Link>
+                <li className="p-2 m-1 bg-orange-500 rounded-lg">
+                        {data.loggedInUser}
                     </li>
-                    <li>
-                        <Link to="/About"><button className="p-2 m-1 bg-pink-300 rounded-sm">About</button></Link>
+                    <li className="p-2 m-1 bg-emerald-500 rounded-lg">
+                        <Link to="/">🏠Home</Link>
                     </li>
-                    <li>
-                        <Link to="/Contact"><button className="p-2 m-1 bg-pink-300 rounded-sm">☎️Contact</button></Link>  
+                    <li className="p-2 m-1 bg-emerald-500 rounded-sm">
+                        <Link to="/About">About</Link>
                     </li>
-                    <li>
-                        <button className="p-2 m-1 bg-pink-300 rounded-sm">Cart🛒</button>
+                    <li className="p-2 m-1 bg-emerald-500 rounded-sm">
+                        <Link to="/Contact">☎️Contact</Link>  
                     </li>
-                    <li>
-                        <Link to="/Grocery"><button className="p-2 m-1 bg-pink-300 rounded-sm">🥑Grocery</button></Link>
+                    <li className="p-2 m-1 bg-emerald-500 rounded-sm">
+                        Cart🛒
                     </li>
-                    <li>
-                        <button className="p-2 m-1 bg-pink-300 rounded-sm">Online Status{onlineStatus?"🟢":"🔴"}</button>
+                    <li className="p-2 m-1 bg-emerald-500 rounded-sm">
+                        <Link to="/Grocery">🥑Grocery</Link>
                     </li>
-                    <li>
-                        <button
-                            className="p-2 m-1 bg-pink-300 rounded-sm"
+                    <li className="p-2 m-1 bg-emerald-500 rounded-sm">
+                        Online Status{onlineStatus?"🟢":"🔴"}
+                    </li>
+                    <li
+                            className="p-2 m-1 bg-emerald-500 rounded-sm"
                             id="login-btn" 
                             onClick={()=>{
                                 loginButton=="Logout"? SetLoginButton("Login") :
                                 SetLoginButton("Logout")}}>{loginButton}
-                        </button>
                     </li>
                 </ul>
             </div>

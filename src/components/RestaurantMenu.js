@@ -2,10 +2,16 @@ import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { useParams } from "react-router-dom";
 import RestaurantCategories from "./RestaurantCategories";
+import { useState, useContext } from "react";
+import UserContext from "./UserContext";
 const RestaurantMenu = () =>{
     const {resId} = useParams();
 
     const resMenu = useRestaurantMenu(resId);
+
+    const [showIndex, setShowIndex] = useState(null);
+
+    const {loggedInUser} = useContext(UserContext);
     
     
     if(resMenu === null)
@@ -31,11 +37,14 @@ const RestaurantMenu = () =>{
             <p className="font-bold text-lg">
                 {cuisines}{"-"}
                 {costForTwoMessage}</p>
+            <h2 className="bg-orange-500">User: {loggedInUser}</h2>
                 {/* Categories accordions */}
 
-                {categories.map(category=>(<RestaurantCategories 
+                {categories.map((category, index) =>(<RestaurantCategories 
                     key={category.card.card.title} 
                     data={category?.card?.card}
+                    showItems={index=== showIndex && true }
+                    setShowIndex = {() => setShowIndex  (index)}
                     />
                     
                     ))}
