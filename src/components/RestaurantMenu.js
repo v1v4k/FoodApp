@@ -28,7 +28,7 @@ const RestaurantMenu = () =>{
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
    )
 
-   console.log(categories);
+   //console.log(categories);
     
         
     return(
